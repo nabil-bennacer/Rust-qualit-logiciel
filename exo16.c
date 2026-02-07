@@ -16,11 +16,22 @@ void print_matrix(double mat[3][3]) {
 }
 
 void matmul_vec(double mat[3][3], double vec[3]) {
+    double res[3] = {0};
+    for(int i=0;i<=2;i++){
+        for(int j=0;j<=2;j++){
+            res[i]+=mat[i][j]*vec[i];
+        }
+    }
+
+    for(int i=0;i<=2;i++){
+        printf("[%f]\n",res[i]);
+    }
+
 
 }
 
 void matmul_mat(double mat_A[3][3], double mat_B[3][3]) {
-    
+
 }
 
 int main() {
