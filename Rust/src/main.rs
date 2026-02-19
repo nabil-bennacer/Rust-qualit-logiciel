@@ -1,22 +1,26 @@
 enum ConnectionState{
     Disconnected,
     Connecting,
-    Connected, 
+    Connected(String), 
     Error(i32),
 }
 
 fn describe(state: ConnectionState ) -> String {
     match state{
-        ConnectionState::Disconnected => { println!("Disconnected")},
-        ConnectionState::Connecting=> {println!("Connecting")},
-        ConnectionState::Connected => {println!("Connected")},
-        ConnectionState::Error(code) => {println!("error{}",code)}
+        ConnectionState::Disconnected => { String::from("Disconnected")},
+        ConnectionState::Connecting=> {String::from("Connecting")},
+        ConnectionState::Connected(ip) => format!("Connected : {}",ip) ,
+        ConnectionState::Error(code) => format!("error {}",code)
     }
-    return String::from("fini")
 }
 
 fn get_user_age(name: &str)->Result<Option<u32>,String>{
-    
+    match name{
+        "Nabil" => Ok(Some(30)),
+        "Rayan" => Ok(Some(25)),
+        "Nayarr" => Ok(None),
+        _ => Err(String::from("Base de donnée innaccessible"))
+    }
 }
 
 fn main() {
@@ -34,5 +38,11 @@ fn main() {
     //         }
     //     }
     // }
-    describe(ConnectionState::Connected);
+    println!("{}",describe(ConnectionState::Connected(String::from("192.168.1.1"))));
+    let nom = "Naya";
+    match get_user_age(nom) {
+        Ok(Some(age)) => println!("L'âge de {} est : {}", nom, age),
+        Ok(None) => println!("utilisateur {} est inconnu", nom),
+        Err(e) => println!("Erreur survenue: {}", e),
+    }
 }
