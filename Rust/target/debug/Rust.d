@@ -1,1 +1,1 @@
-/home/ubuntu/Rust-qualit-logiciel/Rust/target/debug/Rust: /home/ubuntu/Rust-qualit-logiciel/Rust/src/main.rs
+/home/ubuntu/Rust-qualit-logiciel/Rust/target/debug/Rust: /home/ubuntu/Rust-qualit-logiciel/Rust/src/exo1.rs /home/ubuntu/Rust-qualit-logiciel/Rust/src/exo2.rs /home/ubuntu/Rust-qualit-logiciel/Rust/src/exo3.rs /home/ubuntu/Rust-qualit-logiciel/Rust/src/exo4.rs /home/ubuntu/Rust-qualit-logiciel/Rust/src/exo5.rs /home/ubuntu/Rust-qualit-logiciel/Rust/src/main.rs

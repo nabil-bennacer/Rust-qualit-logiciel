@@ -1,27 +1,8 @@
-enum ConnectionState{
-    Disconnected,
-    Connecting,
-    Connected(String), 
-    Error(i32),
-}
-
-fn describe(state: ConnectionState ) -> String {
-    match state{
-        ConnectionState::Disconnected => { String::from("Disconnected")},
-        ConnectionState::Connecting=> {String::from("Connecting")},
-        ConnectionState::Connected(ip) => format!("Connected : {}",ip) ,
-        ConnectionState::Error(code) => format!("error {}",code)
-    }
-}
-
-fn get_user_age(name: &str)->Result<Option<u32>,String>{
-    match name{
-        "Nabil" => Ok(Some(30)),
-        "Rayan" => Ok(Some(25)),
-        "Nayarr" => Ok(None),
-        _ => Err(String::from("Base de donnée innaccessible"))
-    }
-}
+mod exo1;
+mod exo2;
+mod exo3;
+mod exo4;
+mod exo5;
 
 fn main() {
     // println!("Hello, world!");
@@ -38,11 +19,14 @@ fn main() {
     //         }
     //     }
     // }
-    println!("{}",describe(ConnectionState::Connected(String::from("192.168.1.1"))));
-    let nom = "Naya";
-    match get_user_age(nom) {
-        Ok(Some(age)) => println!("L'âge de {} est : {}", nom, age),
-        Ok(None) => println!("utilisateur {} est inconnu", nom),
-        Err(e) => println!("Erreur survenue: {}", e),
-    }
+    // exo1::main();
+    // exo2::main();
+    // exo3::main();
+    // exo4::main();
+    exo5::main();
+
+    
+    
+    
+
 }
