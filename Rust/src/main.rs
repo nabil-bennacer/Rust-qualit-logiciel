@@ -4,6 +4,7 @@ mod exo3;
 mod exo4;
 mod exo5;
 mod exo6;
+mod exo7;
 
 fn main() {
     // println!("Hello, world!");
@@ -25,7 +26,8 @@ fn main() {
     // exo3::main();
     // exo4::main();
     // exo5::main();
-    exo6::main();
+    // exo6::main();
+    exo7::main();
 
     
     
